@@ -1,0 +1,216 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>เวลาเปิด-ปิดร้าน | ชื่นจายย cafe</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3e8ff;
+            color: #2b1638;
+        }
+
+        /* ส่วนหัว */
+        .header {
+            background-color: #24132f;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+            border-bottom: 5px solid #c084fc;
+        }
+
+        .header h1 {
+            color: #e9d5ff;
+            font-size: 32px;
+            margin: 0 0 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* กล่องเวลาเปิด-ปิด */
+        .status-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px 20px;
+            background-color: white;
+            border: 3px solid #d8b4fe;
+            border-radius: 25px;
+            box-shadow: 0 5px 20px rgba(80, 30, 120, 0.15);
+            text-align: center;
+            width: calc(100% - 70px);
+        }
+
+        .status-icon {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .status-container h2 {
+            color: #6b21a8;
+            font-size: 27px;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            color: #7e22ce;
+            margin-bottom: 25px;
+        }
+
+        /* ตารางเวลา */
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .schedule td {
+            padding: 17px 10px;
+            border-bottom: 1px solid #ead7ff;
+            font-size: 16px;
+        }
+
+        .schedule td:first-child {
+            text-align: left;
+            font-weight: bold;
+            color: #6b21a8;
+        }
+
+        .schedule td:last-child {
+            text-align: right;
+            color: #4c1d6f;
+        }
+
+        .schedule tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* สถานะร้าน */
+        .open-label {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            border: 2px solid #c084fc;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .note {
+            color: #7e22ce;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        /* ปุ่มกลับหน้าแรก */
+        .back-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #6b21a8;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #9333ea;
+            transform: scale(1.05);
+        }
+
+        /* ส่วนท้าย */
+        .footer {
+            margin-top: 40px;
+            padding: 22px 10px;
+            text-align: center;
+            background-color: #24132f;
+            color: #e9d5ff;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .status-container h2 {
+                font-size: 23px;
+            }
+
+            .schedule td {
+                padding: 15px 5px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ส่วนหัว -->
+    <div class="header">
+        <h1>💜 OPEN & CLOSED 💜</h1>
+        <p>เวลาทำการของร้าน ชื่นจายย cafe</p>
+    </div>
+
+    <!-- กล่องแสดงเวลา -->
+    <div class="status-container">
+
+        <div class="status-icon">🕒</div>
+
+        <h2>♡ เวลาเปิด-ปิดร้าน ♡</h2>
+
+        <p class="subtitle">
+            แวะมาจิบกาแฟและเติมความสุขกันได้นะคะ ☕
+        </p>
+
+        <table class="schedule">
+
+            <tr>
+                <td>🌷 จันทร์ - ศุกร์</td>
+                <td>11.00 - 21.00 น.</td>
+            </tr>
+
+            <tr>
+                <td>🎀 เสาร์ - อาทิตย์</td>
+                <td>13.00 - 21.00 น.</td>
+            </tr>
+
+        </table>
+
+        <div class="open-label">
+            💜 เปิดให้บริการตามเวลาที่กำหนด
+        </div>
+
+        <p class="note">
+            ♡ ✦ ♡ ✦ ♡<br>
+            แล้วแวะมาพบกันที่ชื่นจายย cafe นะคะ<br>
+            กาแฟหอมกรุ่น เติมความสุขในทุกแก้ว ☕
+        </p>
+
+        <a href="index.html" class="back-button">
+            🏠 กลับหน้าแรก
+        </a>
+
+    </div>
+
+    <!-- ส่วนท้าย -->
+    <div class="footer">
+        ♡ ✦ ชื่นจายย cafe ✦ ♡
+    </div>
+
+</body>
+
+</html>
+```

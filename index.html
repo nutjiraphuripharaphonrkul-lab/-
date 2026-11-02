@@ -1,0 +1,251 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ชื่นจายย cafe</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f3e8ff;
+            font-family: Arial, sans-serif;
+            color: #2b1638;
+        }
+
+
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        .menu-bar {
+            width: 100%;
+            background-color: #24132f;
+            padding: 8px 0;
+            border-bottom: 4px solid #c084fc;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+
+        .menu-bar td {
+            width: 25%;
+            padding: 5px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+
+        .menu-button {
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            margin: 0 auto;
+            transition: transform 0.3s;
+        }
+
+
+        .menu-button:hover {
+            transform: scale(1.05);
+        }
+
+
+        .welcome {
+            text-align: center;
+            background-color: #f3e8ff;
+            padding: 30px 15px;
+        }
+
+
+        .welcome h1 {
+            color: #6b21a8;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+
+        .welcome p {
+            color: #4c1d6f;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .decoration {
+            color: #9333ea;
+            font-size: 22px;
+            letter-spacing: 5px;
+        }
+
+
+        .cafe-section {
+            background-color: #ead7ff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .cafe-section h2 {
+            color: #6b21a8;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+
+        .cafe-section p {
+            color: #4c1d6f;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        .cafe-image {
+            width: 90%;
+            max-width: 1000px;
+            height: auto;
+            border: 5px solid white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(80, 30, 120, 0.25);
+            margin-top: 15px;
+            transition: transform 0.3s;
+        }
+
+        .cafe-image:hover {
+            transform: scale(1.02);
+        }
+
+
+        @media (max-width: 600px) {
+            .menu-bar td {
+                padding: 3px;
+            }
+
+            .menu-button {
+                width: 100%;
+            }
+
+            .welcome h1 {
+                font-size: 23px;
+            }
+
+            .welcome p {
+                font-size: 16px;
+            }
+
+            .cafe-section h2 {
+                font-size: 24px;
+            }
+
+            .cafe-section p {
+                font-size: 15px;
+            }
+
+            .cafe-image {
+                width: 95%;
+                border-width: 3px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <img src="images/banner.png"
+         class="banner"
+         alt="ชื่นจายย cafe">
+
+
+    <table class="menu-bar">
+        <tr>
+
+            <!-- ปุ่ม Menu -->
+            <td>
+                <a href="menu.html">
+                    <img src="images/menu.png"
+                         class="menu-button"
+                         alt="Menu">
+                </a>
+            </td>
+
+<td>
+    <a href="status.html">
+        <img src="images/open.png"
+             class="menu-button"
+             alt="Open & Closed">
+    </a>
+</td>
+            
+
+<td>
+    <a href="review.html">
+        <img src="images/review.png"
+             class="menu-button"
+             alt="Review Us">
+    </a>
+</td>
+
+ 
+
+<td>
+    <a href="contact.html">
+        <img src="images/us.png"
+             class="menu-button"
+             alt="Contact Us">
+    </a>
+</td>
+
+        </tr>
+    </table>
+
+
+    <div class="welcome">
+
+        <div class="decoration">♡ ✦ ♡ ✦ ♡</div>
+
+        <h1>💜 ยินดีต้อนรับสู่ ชื่นจายย cafe 💜</h1>
+
+        <p>☕ กาแฟหอมกรุ่น เติมความสุขในทุกแก้ว ☕</p>
+
+        <p>
+            คาเฟ่สีม่วงสุดน่ารัก<br>
+            ที่พร้อมเติมความสุขให้กับทุกวันของคุณ
+        </p>
+
+        <div class="decoration">♡ ✦ ♡ ✦ ♡</div>
+
+    </div>
+
+
+    <div class="cafe-section">
+
+        <div class="decoration">♡ ✦ ♡ ✦ ♡</div>
+
+        <h2>🎀 บรรยากาศร้านของเรา 🎀</h2>
+
+        <p>
+            ยินดีต้อนรับสู่ ชื่นจายย cafe 💜<br>
+            คาเฟ่สีม่วงสุดน่ารัก ที่พร้อมเติมความสุขให้ทุกวันของคุณ
+        </p>
+
+        <img src="images/cafee.png"
+             class="cafe-image"
+             alt="บรรยากาศร้านชื่นจายย cafe">
+
+        <p>☕ จิบกาแฟแก้วโปรด แล้วปล่อยใจให้สบาย ☕</p>
+
+        <div class="decoration">♡ ✦ ♡ ✦ ♡</div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | ชื่นจายย cafe</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3e8ff;
+            color: #2b1638;
+        }
+
+        /* ส่วนหัว */
+        .header {
+            background-color: #24132f;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+            border-bottom: 5px solid #c084fc;
+        }
+
+        .header h1 {
+            color: #e9d5ff;
+            font-size: 32px;
+            margin: 0 0 10px;
+        }
+
+        .header p {
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        /* กล่องข้อมูลติดต่อ */
+        .contact-container {
+            max-width: 750px;
+            width: calc(100% - 70px);
+            margin: 40px auto;
+            padding: 30px 20px;
+            background-color: white;
+            border: 3px solid #d8b4fe;
+            border-radius: 25px;
+            box-shadow: 0 5px 20px rgba(80, 30, 120, 0.15);
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 60px;
+        }
+
+        .contact-container h2 {
+            color: #6b21a8;
+            font-size: 28px;
+        }
+
+        .contact-container p {
+            color: #7e22ce;
+            line-height: 1.8;
+        }
+
+        /* รายการข้อมูลติดต่อ */
+        .contact-card {
+            background-color: #faf5ff;
+            border: 2px solid #ead7ff;
+            border-radius: 18px;
+            padding: 18px 15px;
+            margin: 18px 0;
+            text-align: left;
+        }
+
+        .contact-card h3 {
+            color: #6b21a8;
+            margin: 0 0 10px;
+            font-size: 19px;
+        }
+
+        .contact-card p {
+            margin: 0;
+            overflow-wrap: anywhere;
+        }
+
+        /* ปุ่มโซเชียล */
+        .social-button {
+            display: inline-block;
+            margin: 7px;
+            padding: 12px 22px;
+            background-color: #6b21a8;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .social-button:hover {
+            background-color: #9333ea;
+            transform: translateY(-3px);
+        }
+
+        /* ปุ่มกลับหน้าแรก */
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            border: 2px solid #c084fc;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #e9d5ff;
+        }
+
+        /* ส่วนท้าย */
+        .footer {
+            margin-top: 40px;
+            padding: 22px 10px;
+            text-align: center;
+            background-color: #24132f;
+            color: #e9d5ff;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .contact-container h2 {
+                font-size: 23px;
+            }
+
+            .social-button {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ส่วนหัว -->
+    <div class="header">
+        <h1>💌 CONTACT US 💌</h1>
+        <p>ติดต่อเราได้ที่ ชื่นจายย cafe</p>
+    </div>
+
+    <!-- กล่องข้อมูลติดต่อ -->
+    <div class="contact-container">
+
+        <div class="contact-icon">🎀☕💜</div>
+
+        <h2>♡ มาทักทายกันนะคะ ♡</h2>
+
+        <p>
+            ขอบคุณที่สนใจชื่นจายย cafe<br>
+            เรายินดีต้อนรับและพร้อมพูดคุยกับทุกคนค่ะ ✨
+        </p>
+
+        <!-- ข้อมูลร้าน -->
+        <div class="contact-card">
+            <h3>🏠 ชื่อร้าน</h3>
+            <p>ชื่นจายย cafe</p>
+        </div>
+
+        <!-- เวลาเปิดร้าน -->
+        <div class="contact-card">
+            <h3>🕒 เวลาเปิดให้บริการ</h3>
+            <p>
+                จันทร์ - ศุกร์ : 11.00 - 21.00 น.<br>
+                เสาร์ - อาทิตย์ : 13.00 - 21.00 น.
+            </p>
+        </div>
+
+        <!-- ช่องทางติดต่อ -->
+        <div class="contact-card">
+            <h3>📱 ช่องทางติดต่อ</h3>
+            <p>
+                Facebook: ใส่ชื่อเพจของร้านที่นี่<br>
+                Instagram: ใส่ชื่อบัญชีของร้านที่นี่<br>
+                โทรศัพท์: ใส่เบอร์โทรศัพท์ของร้านที่นี่
+            </p>
+        </div>
+
+        <h3 style="color:#6b21a8; margin-top:30px;">
+            💜 ติดตามและพูดคุยกับเรา
+        </h3>
+
+        <!-- เปลี่ยน # เป็นลิงก์จริงของร้านก่อนใช้งาน -->
+        <a href="#" class="social-button">📘 Facebook</a>
+
+        <a href="#" class="social-button">📸 Instagram</a>
+
+        <a href="#" class="social-button">💬 LINE</a>
+
+        <br>
+
+        <a href="index.html" class="back-button">
+            🏠 กลับหน้าแรก
+        </a>
+
+    </div>
+
+    <!-- ส่วนท้าย -->
+    <div class="footer">
+        ♡ ✦ ชื่นจายย cafe ✦ ♡
+        <p>กาแฟหอมกรุ่น เติมความสุขในทุกแก้ว 💜</p>
+    </div>
+
+</body>
+
+</html>

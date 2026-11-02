@@ -1,0 +1,300 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Review Us | ชื่นจายย cafe</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3e8ff;
+            color: #2b1638;
+        }
+
+        /* ส่วนหัว */
+        .header {
+            background-color: #24132f;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            border-bottom: 5px solid #c084fc;
+        }
+
+        .header h1 {
+            color: #e9d5ff;
+            font-size: 32px;
+            margin: 0 0 10px;
+        }
+
+        .header p {
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        /* กล่องรีวิว */
+        .review-container {
+            max-width: 600px;
+            width: calc(100% - 70px);
+            margin: 35px auto;
+            padding: 25px 20px;
+            background-color: white;
+            border: 3px solid #d8b4fe;
+            border-radius: 25px;
+            box-shadow: 0 5px 20px rgba(80, 30, 120, 0.15);
+            text-align: center;
+        }
+
+        .review-container h2 {
+            color: #6b21a8;
+            font-size: 27px;
+        }
+
+        .review-container p {
+            color: #7e22ce;
+            line-height: 1.8;
+        }
+
+        /* ช่องกรอกข้อมูล */
+        .form-group {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            color: #6b21a8;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 2px solid #e9d5ff;
+            border-radius: 12px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #a855f7;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* ดาวให้คะแนน */
+        .stars {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .stars input {
+            display: none;
+        }
+
+        .stars label {
+            font-size: 42px;
+            color: #d1c4e9;
+            cursor: pointer;
+            transition: color 0.2s;
+            margin: 0;
+        }
+
+        .stars label:hover,
+        .stars label:hover ~ label,
+        .stars input:checked ~ label {
+            color: #fbbf24;
+        }
+
+        /* ปุ่มส่งรีวิว */
+        .submit-button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            background-color: #6b21a8;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #9333ea;
+        }
+
+        /* ปุ่มกลับหน้าแรก */
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #f3e8ff;
+            color: #6b21a8;
+            border: 2px solid #c084fc;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #e9d5ff;
+        }
+
+        /* ส่วนท้าย */
+        .footer {
+            margin-top: 40px;
+            padding: 22px 10px;
+            text-align: center;
+            background-color: #24132f;
+            color: #e9d5ff;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .review-container h2 {
+                font-size: 23px;
+            }
+
+            .stars label {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ส่วนหัว -->
+    <div class="header">
+        <h1>💜 REVIEW US 💜</h1>
+        <p>ชื่นจายย cafe ยินดีรับฟังทุกความคิดเห็นค่ะ</p>
+    </div>
+
+    <!-- แบบฟอร์มรีวิว -->
+    <div class="review-container">
+
+        <div style="font-size: 50px;">🎀☕🎀</div>
+
+        <h2>แบ่งปันความประทับใจ</h2>
+
+        <p>
+            ขอบคุณที่แวะมาที่ร้านของเรานะคะ<br>
+            ให้คะแนนและบอกความรู้สึกของคุณได้เลย 💜
+        </p>
+
+        <form id="reviewForm">
+
+            <div class="form-group">
+                <label for="customerName">ชื่อของคุณ</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="กรอกชื่อหรือชื่อเล่น"
+                    maxlength="50">
+            </div>
+
+            <div class="form-group">
+                <label>คุณให้คะแนนร้านกี่ดาว? ⭐</label>
+
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5" title="5 ดาว">★</label>
+
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 ดาว">★</label>
+
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="3 ดาว">★</label>
+
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 ดาว">★</label>
+
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 ดาว">★</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comment">ความคิดเห็นของคุณ</label>
+                <textarea
+                    id="comment"
+                    placeholder="เครื่องดื่มอร่อยไหม บรรยากาศเป็นอย่างไร..."
+                    maxlength="1000"
+                    required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">
+                💌 ส่งรีวิว
+            </button>
+
+        </form>
+
+        <div id="message" style="margin-top: 20px;"></div>
+
+        <a href="index.html" class="back-button">
+            🏠 กลับหน้าแรก
+        </a>
+
+    </div>
+
+    <!-- ส่วนท้าย -->
+    <div class="footer">
+        ♡ ✦ ชื่นจายย cafe ✦ ♡
+    </div>
+
+    <script>
+        document.getElementById("reviewForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name =
+                document.getElementById("customerName").value.trim() || "ลูกค้าคนพิเศษ";
+
+            const rating =
+                document.querySelector('input[name="rating"]:checked').value;
+
+            const comment =
+                document.getElementById("comment").value.trim();
+
+            document.getElementById("message").innerHTML =
+                '<div style="background:#f3e8ff; padding:18px; border-radius:15px; color:#6b21a8;">' +
+                '<strong>💜 ขอบคุณสำหรับรีวิวนะคะ ' +
+                escapeHTML(name) + '!</strong><br><br>' +
+                'คะแนนของคุณ: ' + rating + ' / 5 ดาว ⭐<br>' +
+                'ความคิดเห็น: ' + escapeHTML(comment) +
+                '<br><br>ขอบคุณที่มาเติมความสุขกับชื่นจายย cafe 🎀' +
+                '</div>';
+
+            this.reset();
+        });
+
+        function escapeHTML(text) {
+            const element = document.createElement("div");
+            element.textContent = text;
+            return element.innerHTML;
+        }
+    </script>
+
+</body>
+
+</html>

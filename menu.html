@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>เมนูเครื่องดื่ม | ชื่นจายย cafe</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3e8ff;
+            color: #2b1638;
+        }
+
+        /* ส่วนหัว */
+        .header {
+            background-color: #24132f;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            border-bottom: 5px solid #c084fc;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #e9d5ff;
+            font-size: 32px;
+        }
+
+        .header p {
+            margin-bottom: 0;
+        }
+
+        /* ปุ่มกลับหน้าแรก */
+        .back-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 22px;
+            background-color: #c084fc;
+            color: #24132f;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #e9d5ff;
+        }
+
+        /* ส่วนรายการเมนู */
+        .menu-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 25px 15px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #6b21a8;
+            font-size: 26px;
+            margin-top: 25px;
+        }
+
+        /* ตารางเครื่องดื่ม */
+        .drink-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        /* การ์ดเครื่องดื่ม */
+        .drink-card {
+            background-color: white;
+            border: 2px solid #e9d5ff;
+            border-radius: 18px;
+            padding: 20px 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(80, 30, 120, 0.10);
+        }
+
+        .drink-icon {
+            font-size: 45px;
+        }
+
+        .drink-card h3 {
+            color: #6b21a8;
+            margin: 10px 0;
+        }
+
+        .drink-card p {
+            color: #6b5878;
+            margin: 8px 0;
+        }
+
+        .price {
+            color: #9333ea;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* ส่วนท้าย */
+        .footer {
+            margin-top: 30px;
+            background-color: #24132f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .drink-list {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ส่วนหัวหน้าเมนู -->
+    <div class="header">
+        <h1>💜 MENU 💜</h1>
+        <p>เมนูเครื่องดื่มจาก ชื่นจายย cafe</p>
+
+        <a href="index.html" class="back-button">
+            🏠 กลับหน้าแรก
+        </a>
+    </div>
+
+    <!-- รายการเครื่องดื่ม -->
+    <div class="menu-container">
+
+        <h2 class="section-title">☕ Coffee Menu</h2>
+
+        <div class="drink-list">
+
+            <div class="drink-card">
+                <div class="drink-icon">☕</div>
+                <h3>เอสเพรสโซ่</h3>
+                <p>กาแฟเข้มข้น หอมกรุ่น</p>
+                <div class="price">45 บาท</div>
+            </div>
+
+            <div class="drink-card">
+                <div class="drink-icon">🥛</div>
+                <h3>ลาเต้</h3>
+                <p>กาแฟนุ่มละมุน ผสมนมสด</p>
+                <div class="price">50 บาท</div>
+            </div>
+
+            <div class="drink-card">
+                <div class="drink-icon">🧊</div>
+                <h3>อเมริกาโน่</h3>
+                <p>กาแฟหอม สดชื่น</p>
+                <div class="price">45 บาท</div>
+            </div>
+
+            <div class="drink-card">
+                <div class="drink-icon">🍫</div>
+                <h3>มอคค่า</h3>
+                <p>กาแฟผสมช็อกโกแลต</p>
+                <div class="price">55 บาท</div>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">🍵 Non-Coffee Menu</h2>
+
+        <div class="drink-list">
+
+            <div class="drink-card">
+                <div class="drink-icon">🍵</div>
+                <h3>ชาเขียว</h3>
+                <p>ชาเขียวหอมละมุน</p>
+                <div class="price">45 บาท</div>
+            </div>
+
+            <div class="drink-card">
+                <div class="drink-icon">🍫</div>
+                <h3>โกโก้</h3>
+                <p>โกโก้เข้มข้น หวานกำลังดี</p>
+                <div class="price">45 บาท</div>
+            </div>
+
+            <div class="drink-card">
+                <div class="drink-icon">🧋</div>
+                <h3>ชาไทย</h3>
+                <p>ชาไทยหอมหวาน</p>
+                <div class="price">40 บาท</div>
+            </div>
+
+            <div class="drink-card">
+                <div class="drink-icon">🍓</div>
+                <h3>นมสตรอว์เบอร์รี</h3>
+                <p>นมสดรสสตรอว์เบอร์รี</p>
+                <div class="price">45 บาท</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ส่วนท้าย -->
+    <div class="footer">
+        <p>♡ ✦ ชื่นจายย cafe ✦ ♡</p>
+        <p>กาแฟหอมกรุ่น เติมความสุขในทุกแก้ว 💜</p>
+    </div>
+
+</body>
+</html>
